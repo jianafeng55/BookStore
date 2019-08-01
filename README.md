@@ -1,7 +1,7 @@
 # BookStore
 Shopping Website
 
-## PROJECT TREE STRUCTURE:-
+## Project Tree Structure:-
 	
 	BookStore/
 	├── css/ (contains all the css files)
@@ -17,7 +17,7 @@ Shopping Website
 	├── js/ (contains Bootstrap Js files.)
 	│    ├── bootstrap.js
 	│    └── bootstrap.min.js
-        |    └── jquery.js	 
+	│    └── style.css
 	├──  img/
 	│    └── (contains all images required for developing the website)
 	├──  includes/	 
@@ -40,7 +40,7 @@ Shopping Website
 	├──  signup_script.php
 	└──  success.php
 
-## SETUP:-				
+## Setup:-				
 
 - Start the Apache and MySQL modules using the XAMPP controller.
 - Open the phpMyAdmin and create a database "thomsonstore". 
