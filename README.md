@@ -17,7 +17,7 @@ Shopping Website
 	├── js/ (contains Bootstrap Js files.)
 	│    ├── bootstrap.js
 	│    └── bootstrap.min.js
-	│    └── style.css
+	│    └── jquery.js
 	├──  img/
 	│    └── (contains all images required for developing the website)
 	├──  includes/	 
