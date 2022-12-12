@@ -29,3 +29,4 @@ The mainly language is PHP and HTML/JS/CSS
 
 ## Screenshots
 
+![Screenshot-1](https://github.com/jianafeng55/CS6400BookStore/blob/main/img/photo1.png)
