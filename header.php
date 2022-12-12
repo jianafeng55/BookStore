@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-header">
            <a class="navbar-brand" href="index.php">
-				<img src="img/logo-white.png" style="padding-top: 0px; height: 36px;width: 170px">
+				<img src="img/logo5.png" style="padding-top: 0px; height: 36px;width: 170px">
        		</a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
@@ -17,8 +17,7 @@
                 if (isset($_SESSION['email'])) {
                     ?>
                     <li><a href = "cart.php" style="background-color: #1A0900;color: white"><span class = "glyphicon glyphicon-shopping-cart"></span> Cart </a></li>
-                    <li><a href = "settings.php" style="background-color: #1A0900;color: white"><span class = "glyphicon glyphicon-user"></span> Settings</a></li>
-                    <li><a href = "logout_script.php" style="background-color: #1A0900;color: white"><span class = "glyphicon glyphicon-log-in"></span> Logout</a></li>
+                    <li><a href = "logout_html.php" style="background-color: #1A0900;color: white"><span class = "glyphicon glyphicon-log-in"></span> Logout</a></li>
                     <?php
                 } else {
                     ?>

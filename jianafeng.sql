@@ -1,64 +1,58 @@
--- phpMyAdmin SQL Dump
--- version 4.7.9
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1:3306
--- Generation Time: Jul 31, 2019 at 07:55 PM
--- Server version: 5.7.21
--- PHP Version: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `thomsonstore`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `items`
---
-
-DROP TABLE IF EXISTS `items`;
-CREATE TABLE IF NOT EXISTS `items` (
+DROP TABLE IF EXISTS `books`;
+CREATE TABLE IF NOT EXISTS `books` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `price` int(11) NOT NULL,
+  `rating` float(6,1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `items`
---
+DROP TABLE IF EXISTS `publisers`;
+CREATE TABLE IF NOT EXISTS `publisers` (
+  `P_id` int(11) NOT NULL AUTO_INCREMENT,
+  `P_name` varchar(255) NOT NULL,
+  PRIMARY KEY (`P_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `items` (`id`, `name`, `price`) VALUES
-(1, 'Political Biography', 360),
-(2, 'Dr Kalam Life', 400),
-(3, 'Dan Brown Origin', 500),
-(4, 'Fairy Tales', 500),
-(5, 'Bible', 1300),
-(6, 'Bhagwat Gita', 2000),
-(7, 'German Dictionary', 2200),
-(8, 'French Dictionary', 2300),
-(9, 'Mercedes', 800),
-(10, 'Vistara', 1000),
-(11, 'Airports', 1500),
-(12, 'Compass', 1300);
+INSERT INTO `books` (`id`, `name`, `price`,`rating`) VALUES
+(1, 'A Promised Land', 60, 4.8),
+(2, 'The Kinfolk Entrepreneur', 80, 4.7),
+(3, 'Will', 50, 4.6),
+(4, 'Harry Potter and the Prisoner of Azkaban', 50, 4.5),
+(5, 'Bible', 130, 4.4),
+(6, 'Bhagwat Gita', 200, 4.3),
+(7, 'German Dictionary', 220, 4.2),
+(8, 'French Dictionary', 200, 4.1),
+(9, 'Mercedes', 80, 4.0),
+(10, 'Vistara', 100, 3.9),
+(11, 'Airports', 150, 3.8),
+(12, 'Compass', 100, 3.7);
 
--- --------------------------------------------------------
+INSERT INTO `publisers` (`P_id`, `P_name`) VALUES
+(1, 'VMH Publishing'),
+(2, 'Allwrite Publishing'),
+(3, 'FC&A Publishing'),
+(4, 'Pinnacle Point Publishing Inc.'),
+(5, 'The Mezzo Agency'),
+(6, 'iWriteBooks Publishing'),
+(7, 'BookLogix'),
+(8, 'KLE Publishing'),
+(9, 'Mynd Matters Publishing'),
+(10, 'L.B Publishing'),
+(11, 'Dake Publishing'),
+(12, 'CKC Publishing House');
 
---
--- Table structure for table `users`
---
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
@@ -72,14 +66,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `users_items`
---
-
-DROP TABLE IF EXISTS `users_items`;
-CREATE TABLE IF NOT EXISTS `users_items` (
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `item_id` int(11) NOT NULL,

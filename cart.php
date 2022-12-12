@@ -1,5 +1,5 @@
 <?php
-require("includes/common.php");
+require("main.php");
 if (!isset($_SESSION['email'])) {
     header('location: index.php');
 }
@@ -9,14 +9,14 @@ if (!isset($_SESSION['email'])) {
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Cart</title>
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <link href="bootstrap.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src="jquery.js"></script>
+        <script src="bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container-fluid" id="content">
-            <?php include 'includes/header.php'; ?>
+            <?php include 'header.php'; ?>
             <div class="row decor_bg">
                 <div class="col-md-6 col-md-offset-3">
                     <table class="table table-striped">
@@ -25,14 +25,16 @@ if (!isset($_SESSION['email'])) {
                         <?php
                         $sum = 0;
                         $user_id = $_SESSION['user_id'];
-                        $query = "SELECT items.price AS Price, items.id, items.name AS Name FROM users_items JOIN items ON users_items.item_id = items.id WHERE users_items.user_id='$user_id' and status='Added to cart'";
+                        $query = "SELECT books.price AS Price, books.id, books.name AS Name 
+                                  FROM orders JOIN books ON orders.item_id = books.id 
+                                  WHERE orders.user_id='$user_id' and status='Added to cart'";
                         $result = mysqli_query($con, $query)or die($mysqli_error($con));
                         if (mysqli_num_rows($result) >= 1) {
                             ?>
                             <thead>
                                 <tr>
                                     <th>Item Number</th>
-                                    <th>Item Name</th>
+                                    <th>Book Name</th>
                                     <th>Price</th>
                                     <th></th>
                                 </tr>
@@ -58,9 +60,6 @@ if (!isset($_SESSION['email'])) {
                     </table>
                 </div>
             </div>
-        </div>
-        <div style="margin-top: 18px">
-        	<?php include "includes/footer.php"; ?>
         </div>
     </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
-require("includes/common.php");
-// Redirects the user to products page if logged in.
+require("main.php");
 if (isset($_SESSION['email'])) {
     header('location: products.php');
 }
@@ -10,17 +9,16 @@ if (isset($_SESSION['email'])) {
 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Login</title>
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src="jquery.js"></script>
+        <script src="bootstrap.min.js"></script>
     </head>
 
     <body>
-        <?php include 'includes/header.php'; ?>
+        <?php include 'header.php'; ?>
         <div id="content">
             <div class="container-fluid decor_bg" id="login-panel">
                 <div class="row">
@@ -31,7 +29,7 @@ if (isset($_SESSION['email'])) {
                             </div>
                             <div class="panel-body">
                                 <p class="text-warning"><i>Login to make a purchase</i><p>
-                                <form action="login_submit.php" method="POST">
+                                <form action="login_html.php" method="POST">
                                     <div class="form-group">
                                         <input type="email" class="form-control"  placeholder="Email" name="e-mail" required = "true">
                                     </div>
@@ -47,10 +45,6 @@ if (isset($_SESSION['email'])) {
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div style="margin-top: 18px">
-        	<?php include "includes/footer.php"; ?>
         </div>
     </body>
 </html>

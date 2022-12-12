@@ -1,7 +1,6 @@
 <?php
-require("includes/common.php");
+require("main.php");
 
-// Redirects the user to products page if he/she is logged in.
 if (isset($_SESSION['email'])) {
   header('location: products.php');
 }
@@ -13,20 +12,18 @@ if (isset($_SESSION['email'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Welcome</title>
         <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap.css" rel="stylesheet">
         <!-- Custom CSS -->
-        <link href="css/style.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
         <!-- jQuery -->
-        <script src="js/jquery.js"></script>
+        <script src="jquery.js"></script>
         <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="bootstrap.min.js"></script>
     </head>
     <body style="padding-top: 50px;">
-        <!-- Header -->
         <?php
-        include 'includes/header.php';
+        include 'header.php';
         ?>
-        <!--Header end-->
 
         <div id="content">
             <!--Slider Start -->
@@ -57,7 +54,6 @@ if (isset($_SESSION['email'])) {
 				  <div class="container">
 					  <div class="carousel-caption">
 						  <h1><b>Now product is right at your finger tip</b></h1>
-						  <h4>order online as many products as you need</h4>
 					  </div>
 				  </div>
 			  </div>
@@ -96,7 +92,7 @@ if (isset($_SESSION['email'])) {
                     <div class="col-sm-4">
                         <a href="products.php#cameras" >
                             <div class="thumbnail">
-                                <img src="img/w_1_books.png" alt="Books Image">
+                                <img src="img/new_s_1.png" alt="Books Image">
                                 <div class="caption">
                                     <h3 style="color: #1A0900">Books</h3>
                                     <p style="color: #1A0900">Trade | Science, Technical & Medical | Law</p>
@@ -108,9 +104,9 @@ if (isset($_SESSION['email'])) {
                     <div class="col-sm-4">
                         <a href="products.php#watches" >
                             <div class="thumbnail">
-                                <img src="img/w_2_thinPaperProducts.png" alt="Thin Paper Products Image">
+                                <img src="img/s_4" alt="Thin Paper Products Image">
                                 <div class="caption">
-                                    <h3 style="color: #1A0900">Thin Paper Products</h3>
+                                    <h3 style="color: #1A0900">Religion & Dictionary</h3>
                                     <p style="color: #1A0900">Bible & Religious | Dictionaries | Directories</p>
                                 </div>
                             </div> 
@@ -120,7 +116,7 @@ if (isset($_SESSION['email'])) {
                     <div class="col-sm-4">
                         <a href="products.php#shirts" >
                             <div class="thumbnail">
-                                <img src="img/w_3_magazines.png" alt="Magazines Image">
+                                <img src="img/new_s_222" alt="Magazines Image">
                                 <div class="caption">
                                     <h3 style="color: #1A0900">Magazines</h3>
                                     <p style="color: #1A0900">Vistara | Mercedes | India Today</p>
@@ -135,9 +131,8 @@ if (isset($_SESSION['email'])) {
         </div>
         
         <!--Footer-->
-        <?php
-        include 'includes/footer.php';
-        ?>
+        <!-- <?php
+        ?> -->
         <!--Footer end-->
    
     </body> 
