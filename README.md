@@ -14,8 +14,8 @@
 
 ## Data Preparation and Setup
 
-I have stored dataset in jianafeng.sql file, so operate just like the above Instructions. 
-My application will generate data when users sign up and enter their information and those information will be stored in the "users" TABLE in phpMyAdmin. 
+- I have stored dataset in jianafeng.sql file, so operate just like the above Instructions. 
+- My application will generate data when users sign up and enter their information and those information will be stored in the "users" TABLE in phpMyAdmin. 
 And when users add books in their cart, this behavior will generate data and those data will be store in the "orders" TABLE in phpMyAdmin. 
 
 
@@ -24,5 +24,5 @@ And when users add books in their cart, this behavior will generate data and tho
 The mainly language is PHP and HTML/JS/CSS
 
 ## Code References
-Reference Link: https://github.com/sahilmore-git/EcommerceWebsite
-I have referred this github code and change a lot, including the dataset I added and queries I wrote. 
+- Reference Link: https://github.com/sahilmore-git/EcommerceWebsite
+- I have referred this github code and change a lot, including the dataset I added and queries I wrote. 
