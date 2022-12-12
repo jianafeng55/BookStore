@@ -26,3 +26,6 @@ The mainly language is PHP and HTML/JS/CSS
 ## Code References
 - Reference Link: https://github.com/sahilmore-git/EcommerceWebsite
 - I have referred this github code and change a lot, including the dataset I added and queries I wrote. 
+
+## Screenshots
+
